@@ -1,0 +1,8 @@
+e:\vsfun\helloword\bin\Debug\netcoreapp1.1\helloword.deps.json
+e:\vsfun\helloword\bin\Debug\netcoreapp1.1\helloword.runtimeconfig.json
+e:\vsfun\helloword\bin\Debug\netcoreapp1.1\helloword.runtimeconfig.dev.json
+e:\vsfun\helloword\bin\Debug\netcoreapp1.1\helloword.dll
+e:\vsfun\helloword\bin\Debug\netcoreapp1.1\helloword.pdb
+e:\vsfun\helloword\obj\Debug\netcoreapp1.1\helloword.AssemblyInfo.cs
+e:\vsfun\helloword\obj\Debug\netcoreapp1.1\helloword.dll
+e:\vsfun\helloword\obj\Debug\netcoreapp1.1\helloword.pdb
