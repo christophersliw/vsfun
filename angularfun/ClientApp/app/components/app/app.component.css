@@ -5,7 +5,9 @@
     }
 
 }
-
+h2{
+    color: blue;
+}
 .main-nav{
 top: 100px;
 }
