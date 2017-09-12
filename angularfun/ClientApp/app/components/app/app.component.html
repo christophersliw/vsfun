@@ -1,12 +1,10 @@
 <h1>{{title}}</h1>
-<h2>My favorite hero is: {{myHero}}</h2> 
-<!-- <div class='container-fluid'>
-<div class='row'>
-    <div class='col-sm-3'>
-        <nav-menu></nav-menu>
-    </div>
-    <div class='col-sm-9 body-content'>
-        <router-outlet></router-outlet>
-    </div>
-</div>
-</div> -->
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+<li *ngFor="let hero of heroes" (click)="onSelect(hero)"  [class.selected]="hero === selectedHero">
+<span class="badge">{{hero.id}}</span> {{hero.name}}
+</li>
+</ul>
+
+<hero-detail [hero]="selectedHero"></hero-detail>
