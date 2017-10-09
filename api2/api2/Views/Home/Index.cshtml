@@ -1,0 +1,16 @@
+﻿@model IList<api2.Models.Product>
+
+
+<div>
+    <h2>All Products 01</h2>
+    <ul id="products1">
+       @foreach (var item in Model)
+       {
+           <li>
+               @Html.Raw(String.Format("{0}: $ {1}", item.Name, item.Price))
+           </li>
+       }
+    </ul>
+</div>
+
+
