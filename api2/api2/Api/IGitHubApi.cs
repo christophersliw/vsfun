@@ -28,9 +28,5 @@ namespace api2.Api
         [Post("/api/apitest/login")] 
         [Headers("Authorization: Bearer")]
         Task<string> Login(string userName, string password);
-        
-        [Get("/api/apitest/GetInitializeToken")] 
-        Task<string> GetInitializeToken(string orgName);
-
     }
 }

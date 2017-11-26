@@ -16,32 +16,12 @@ namespace api2.Controllers
 		public async Task<ActionResult> Index()
 		{
 			ViewBag.Title = "Home Page";
-
-//			var gitHubApi = RestService.For<IGitHubApi>("http://localhost:24571");
-//
-//			await gitHubApi.AddProduct(new Product() {Id = 10, Name = "nowy1", Price = 2});
-			var gitHubApi = RestService.For<IGitHubApi>("http://localhost:24571");
-
-			await gitHubApi.TestToken();
-
-
-			string tmp =   await gitHubApi.GetInitializeToken("123");
 			
 			var secretApi = RestService.For<IGitHubApi>(new HttpClient(new AuthenticatedHttpClientHandler(GetToken)) { BaseAddress = new Uri("http://localhost:24571") });
 
-
-			string token = await secretApi.Login("demo", "haslo");
-
-			Session["token"] = token;
+			var list = secretApi.GetSecretProducts();
 			
-			IList<Product> model = await  secretApi.GetSecretProducts();
-		
-//			await secretApi.SecretMethodApply(new Product() {Id = 11, Name = "nowy2", Price = 2});
-//			await secretApi.SecretMethodApply(new Product() {Id = 11, Name = "nowy3", Price = 2});
-
-			
-			
-			return View(model);
+			return View(new List<Product>());
 		}	
 		
 		
@@ -52,10 +32,10 @@ namespace api2.Controllers
 
 			if (Session["token"] == null)
 			{
-				var gitHubApi = RestService.For<IGitHubApi>("http://localhost:24571");
+				var gitHubApi = RestService.For<IGitHubInitApi>("http://localhost:24571");
 
-				token =   await gitHubApi.GetInitializeToken("123");
-				Session["token"] = token;
+				var tokenModel =   await gitHubApi.GetInitializeToken("123");
+				Session["token"] = tokenModel.Token;
 			}
 			else
 			{

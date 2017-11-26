@@ -200,6 +200,7 @@
   <ItemGroup>
     <Compile Include="ApiAuthorizeAttrbute.cs" />
     <Compile Include="Api\IGitHubApi.cs" />
+    <Compile Include="Api\IGitHubInitApi.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -215,6 +216,7 @@
     <Compile Include="JwtAuthenticationAttribute.cs" />
     <Compile Include="JwtManager.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\TokenModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -30,17 +30,19 @@ namespace api2.Controllers
 
 
 		[HttpGet]
-        public string GetInitializeToken(string orgName)
+        public TokenModel GetInitializeToken(string orgName)
         {
+            TokenModel model = new TokenModel();
+            
             if (orgName == "123")
             {        
-                return new JwtManager().GenerateToken(_orgKod, null);
+                  model.Token =   new JwtManager().GenerateToken(_orgKod, null);
 
-
+                return model;
             }
             else
             {
-                return null;
+                return model;
             }
         }
         
