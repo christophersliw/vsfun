@@ -1,3 +1,18 @@
+https://www.youtube.com/watch?v=AKkoT0UnUn0
+http://www.codingflow.net/angular-2-asp-net-core-quickstart-using-visual-studio-code/
+https://www.youtube.com/watch?v=C6MPSLgsGGs
+
 webpack --config .\webpack.config.vendor.js
 
 https://github.com/Microsoft/api-guidelines/blob/vNext/Guidelines.md
+
+color a
+
+prompt $g
+
+code .
+
+dotnet run - uruchamianie
+dotnet watch run - uruchamianie - monitorin zmian
+
+setx ASPNETCORE_ENVIRONMENT "Development"
