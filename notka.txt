@@ -16,3 +16,5 @@ dotnet run - uruchamianie
 dotnet watch run - uruchamianie - monitorin zmian
 
 setx ASPNETCORE_ENVIRONMENT "Development"
+
+http://kursjs.pl/kurs/obiekty/obiekty.php

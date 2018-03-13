@@ -11,6 +11,12 @@ namespace apka.Controllers
     {
         public IActionResult Index()
         {
+            int  i = 0;
+
+            {
+                int I = 10;
+            }
+
             return View();
         }
 
