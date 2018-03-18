@@ -6,6 +6,7 @@ webpack --config .\webpack.config.vendor.js
 
 https://github.com/Microsoft/api-guidelines/blob/vNext/Guidelines.md
 
+konsola - kolor
 color a
 
 prompt $g
@@ -22,3 +23,9 @@ http://kursjs.pl/kurs/obiekty/obiekty.php
 rest 
 https://curl.haxx.se/
 https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
+
+test requst
+https://requestb.in/
+
+json - sprawdzenie poprawnosci
+https://jsonlint.com/
