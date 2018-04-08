@@ -29,3 +29,6 @@ https://requestb.in/
 
 json - sprawdzenie poprawnosci
 https://jsonlint.com/
+
+darmowe grafiki
+https://www.pexels.com/
