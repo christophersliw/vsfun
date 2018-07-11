@@ -32,3 +32,5 @@ https://jsonlint.com/
 
 darmowe grafiki
 https://www.pexels.com/
+
+http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html
