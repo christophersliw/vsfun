@@ -20,6 +20,10 @@
     <ItemGroup>
         <!-- Don't publish the SPA source files, but do show them in the project files list -->
         <Content Remove="$(SpaRoot)**" />
+        <Content Include="ClientApp\src\app\task-details\task-details.component.css" />
+        <Content Include="ClientApp\src\app\task-details\task-details.component.html" />
+        <Content Include="ClientApp\src\app\task-details\task-details.component.spec.ts" />
+        <Content Include="ClientApp\src\app\task-details\task-details.component.ts" />
         <Content Include="ClientApp\src\app\tasks\mock-tasks.ts" />
         <Content Include="ClientApp\src\app\tasks\task.ts" />
         <Content Include="ClientApp\src\app\tasks\tasks.component.css" />

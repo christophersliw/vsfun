@@ -4,6 +4,13 @@ namespace data
 {
     public interface ITaskServices
     {
-        IList<UserTask> GetAll();
+        IEnumerable<UserTask> GetAll();
+        UserTask GetById(int id);
+
+        void Update(UserTask element);
+
+        UserTask Add(UserTask element);
+
+        UserTask Delete(int id);
     }
 }

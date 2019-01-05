@@ -4,14 +4,4 @@
   </li>
 </ul>
 
-<div *ngIf="selectedTask">
-  <h2>edycja elementu: {{selectedTask.title}}</h2>
-  <div>
-    <label>title:
-      <input [(ngModel)]="editedTask.title" placeholder="title">
-    </label>
-    <label>desc:
-      <input [(ngModel)]="editedTask.description" placeholder="description">
-    </label>
-  </div>
-</div>
+<app-task-details [selectedTask]="selectedTask" [editedTask]="editedTask"></app-task-details>

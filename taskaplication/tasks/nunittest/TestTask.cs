@@ -2,6 +2,7 @@ using data;
 using Moq;
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Linq;
 using tasks.Controllers;
 
 namespace Tests
@@ -36,7 +37,7 @@ namespace Tests
 
             TaskController taskController = new TaskController(taskServices.Object);
 
-            Assert.AreEqual(2, taskController.GetAll().Count);
+            Assert.AreEqual(2, taskController.GetAll().Value.ToList().Count);
         }
     }
 }
