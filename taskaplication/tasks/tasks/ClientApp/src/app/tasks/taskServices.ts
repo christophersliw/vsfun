@@ -1,9 +1,10 @@
-import { Injectable } from '@angular/core';
+import {EventEmitter, Injectable, Output} from '@angular/core';
 import {Task} from "./task";
-import {Tasks} from "./mock-tasks";
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {catchError} from "rxjs/operators";
+import 'rxjs/add/operator/map';
+import { map } from 'rxjs/operators';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json; charset=utf-8' })
@@ -13,6 +14,8 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class TaskService {
+
+  @Output() refreshListEvent = new EventEmitter();
 
   private taskUrl = 'api/tasks';  // URL to web api
 
@@ -24,6 +27,14 @@ export class TaskService {
 
   updateTask (id:number, task: Task): Observable<any> {
     return this.http.put(this.taskUrl + '/' + id, task, httpOptions);
+  }
+
+  addTask(task: Task): Observable<Task>{
+    return this.http.post(this.taskUrl, task, httpOptions).pipe(map((task) => new Task()));
+  }
+
+  refreshList(){
+    this.refreshListEvent.emit();
   }
 
 }

@@ -18,6 +18,9 @@ export class TasksComponent implements OnInit {
 
   ngOnInit() {
     this.getTasks();
+    this.taskService.refreshListEvent.subscribe(item => {
+      this.refreshList();
+    });
   }
 
   onSelect(task: Task):void{
@@ -31,6 +34,19 @@ export class TasksComponent implements OnInit {
 
   getTasks():void{
     this.taskService.getTasks().subscribe(tasks =>this.tasks = tasks);
+  }
+
+  add(title: string): void {
+    title = title.trim();
+    if (!title) { return; }
+    this.taskService.addTask({ title } as Task)
+      .subscribe(task => {
+        this.tasks.push(task);
+      });
+  }
+
+  refreshList():void{
+    this.getTasks();
   }
 
 }

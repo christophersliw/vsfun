@@ -6,7 +6,7 @@ namespace data
 {
     public class TaskServices : ITaskServices
     {
-        private static IEnumerable<UserTask> _fakeList = new List<UserTask>()
+        private static IList<UserTask> _fakeList = new List<UserTask>()
         {
             new UserTask()
             {
@@ -53,7 +53,7 @@ namespace data
 
             element.Id = newId;
             
-            _fakeList.ToList().Add(element);
+            _fakeList.Add(element);
             
             return element;
         }

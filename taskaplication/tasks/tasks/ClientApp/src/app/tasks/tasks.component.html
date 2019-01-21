@@ -1,7 +1,17 @@
+<div>
+  <label>
+    title:
+    <input #taskTitle>
+  </label>
+  <button (click)="add(taskTitle.value); taskTitle.value=''">
+    add
+  </button>
+</div>
+
 <ul>
   <li *ngFor="let task of tasks" (click)="onSelect(task)">
     <span>{{task.id}}</span>&nbsp;<span>{{task.title}}</span>&nbsp;<span>{{task.description}}</span>
   </li>
 </ul>
 
-<app-task-details [selectedTask]="selectedTask" [editedTask]="editedTask"></app-task-details>
+<app-task-details  [selectedTask]="selectedTask" [editedTask]="editedTask" ></app-task-details>

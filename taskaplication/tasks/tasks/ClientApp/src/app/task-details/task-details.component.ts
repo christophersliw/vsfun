@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 import {Task} from "../tasks/task";
 import {TaskService} from "../tasks/TaskServices";
 
@@ -17,12 +17,13 @@ export class TaskDetailsComponent implements OnInit {
   }
 
   updateTaskList(task: Task):void{
-
+    this.taskService.refreshList();
   }
 
   save(): void {
     this.taskService.updateTask(this.selectedTask.id, this.editedTask)
       .subscribe(() => this.updateTaskList(this.editedTask));
   }
+
 
 }
